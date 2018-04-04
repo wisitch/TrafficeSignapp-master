@@ -1,6 +1,7 @@
 package sdu.cs58.wisit.trafficesignapp;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -47,5 +48,12 @@ public class MainActivity extends AppCompatActivity {
        });
 
 
-    }//end mathod
+    }//end Oncreate mathod
+
+    public void clickLink(View view){
+        Intent linkIntent = new Intent(Intent.ACTION_VIEW);
+        linkIntent.setData(Uri.parse("https://www.dlt.go.th/th/"));
+        startActivity(linkIntent);
+    }//end clickLink method
+
 }//end class
